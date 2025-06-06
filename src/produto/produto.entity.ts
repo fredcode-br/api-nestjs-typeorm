@@ -1,14 +1,11 @@
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-
-// class CaracteristicaProduto {
-//   nome: string;
-//   descricao: string;
-// }
-
-// class ImagemProduto {
-//   url: string;
-//   descricao: string;
-// }
+import {
+  Column,
+  CreateDateColumn,
+  DeleteDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
 @Entity({ name: 'produtos' })
 export class ProdutoEntity {
@@ -33,10 +30,6 @@ export class ProdutoEntity {
   @Column({ name: 'categoria', length: 100, nullable: false })
   categoria: string;
 
-
-  // caracteristicas: CaracteristicaProduto[];
-  // imagens: ImagemProduto[];
-
   @CreateDateColumn({ name: 'created_at' })
   createdAt: string;
 
@@ -45,4 +38,7 @@ export class ProdutoEntity {
 
   @DeleteDateColumn({ name: 'deleted_at' })
   deletedAt: string;
+
+  // caracteristicas: CaracteristicaProduto[];
+  // imagens: ImagemProduto[];
 }
